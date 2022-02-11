@@ -1,0 +1,35 @@
+.Controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.Controls-form {
+  width: 48%;
+}
+
+#Controls-format-selector,
+#Controls-background-selector {
+  font-weight: 900;
+}
+
+#Controls-format,
+#Controls-background {
+  min-height: 0.4em;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+Button.Controls-btn {
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+Button.Controls-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 10px -5px hsl(0, 0%, 60%);
+}
