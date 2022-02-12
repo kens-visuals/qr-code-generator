@@ -26,7 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: grid;
   grid-template-rows: 1fr auto;
-  justify-items: center;
+  justify-items: flex-start;
   align-items: center;
 }
 
