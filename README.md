@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [https://kens-visuals.github.io/qr-code-generator/](https://kens-visuals.github.io/qr-code-generator/)
-- Solution URL: [TO_BE_UPDATED](TO_BE_UPDATED)
+- Solution URL: [https://www.frontendmentor.io/solutions/qr-code-generator-with-react-and-material-ui-XpZA7o_Ke](https://www.frontendmentor.io/solutions/qr-code-generator-with-react-and-material-ui-XpZA7o_Ke)
 
 ## My process
 
