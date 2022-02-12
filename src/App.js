@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import FileSaver from 'file-saver';
 
-import Footer from './Footer';
-import Controls from './Controls';
+import Footer from './components/Footer';
+import Controls from './components/Controls';
+import useOnChange from './hooks/useOnChange';
 
 import './App.css';
 
@@ -13,36 +14,19 @@ function App() {
       &bgcolor=2b7dfa&color=fff&format=png
       &qzone=10&data='https://github.com/kens-visuals'`
   );
-  const [data, setData] = useState({
-    bgColor: '2b7dfa',
-    format: 'png',
-    value: '',
-  });
 
-  function handleChange(e) {
-    setData((prevData) => ({ ...prevData, value: e.target.value }));
-  }
-
-  function handleFormatChange(e) {
-    setData((prevData) => ({ ...prevData, format: e.target.value }));
-  }
-
-  function handleBgColor(e) {
-    setData((prevData) => ({ ...prevData, bgColor: e.target.value }));
-  }
+  const { value, format, bgColor, onChange } = useOnChange();
 
   function saveQR() {
-    FileSaver.saveAs(qr, `qrcode.${data.format}`);
-    setData((prevData) => ({ ...prevData, value: '' }));
+    FileSaver.saveAs(qr, `qrcode.${format}`);
+    onChange((prevData) => ({ ...prevData, value: '' }));
   }
 
   useEffect(() => {
     async function getImg() {
       const res = await fetch(
-        `https://api.qrserver.com/v1/create-qr-code/?size=500x500&bgcolor=${
-          data.bgColor
-        }&color=fff&format=${data.format}&qzone=10&data=${
-          data.value || 'https://github.com/kens-visuals'
+        `https://api.qrserver.com/v1/create-qr-code/?size=500x500&bgcolor=${bgColor}&color=fff&format=${format}&qzone=10&data=${
+          value || 'https://github.com/kens-visuals'
         }`
       );
 
@@ -53,36 +37,36 @@ function App() {
     }
 
     getImg();
-  }, [data]);
+  }, [value, format, bgColor]);
 
   return (
     <div className="container">
       <main className="App">
-        <h1 className="App-heading" style={{ background: `#${data.bgColor}` }}>
+        <h1 className="App-heading" style={{ background: `#${bgColor}` }}>
           QR Generator
         </h1>
         <input
           style={{
-            border: `0.1rem solid #${data.bgColor}`,
+            border: `0.1rem solid #${bgColor}`,
             transition: 'all 0.3s',
             transitionDelay: '.16s',
           }}
           type="text"
-          value={data.value}
+          value={value}
           className="App-input"
           placeholder="Insert link"
-          onChange={(e) => handleChange(e, data.value)}
+          onChange={(e) => onChange(e, 'value')}
         />
 
         <img src={qr} alt="qr code" className="App-img" />
 
         <Controls
           qr={qr}
-          value={data.value}
-          format={data.format}
-          bgColor={data.bgColor}
-          handleFormatChange={handleFormatChange}
-          handleBgColor={handleBgColor}
+          value={value}
+          format={format}
+          bgColor={bgColor}
+          handleFormatChange={(e) => onChange(e, 'format')}
+          handleBgColor={(e) => onChange(e, 'bgColor')}
           saveQR={saveQR}
         />
       </main>

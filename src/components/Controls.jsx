@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import DownloadIcon from '@mui/icons-material/Download';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
 
-import './Controls.css';
+import '../styles/Controls.css';
 
 export default function Controls(props) {
   const colorsData = [
