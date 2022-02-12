@@ -13,7 +13,7 @@ This is a solution to the [QR Code Component Challenge on Frontend Mentor](https
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Author's Links](#authors-links)
 
 ## Overview
 
@@ -62,7 +62,7 @@ Since this was a small project and didn't have a lot of components involved, I d
 - [filesaver.js](https://www.npmjs.com/package/file-saver) - If you're looking for a JS filer saver, this is my recommendation.
 - [copytoclipboard.js](https://www.npmjs.com/package/react-copy-to-clipboard) - In case if you were wondering, this is what I used for the embed button to copy to clipboard the link of the QR code.
 
-## Author
+## Author's Links
 
 - Medium - [@kens_visuals](https://medium.com/@kens_visuals)
 - CodePen - [@kens-visuals](https://codepen.io/kens-visuals)
