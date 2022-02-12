@@ -3,7 +3,8 @@ import FileSaver from 'file-saver';
 
 import Footer from './Footer';
 import Controls from './Controls';
-import useChange from './useChange';
+
+import qrImg from './qrcode.png';
 
 import './App.css';
 
@@ -59,9 +60,13 @@ function App() {
   return (
     <div className="container">
       <main className="App">
+        <h1 className="App-heading" style={{ background: `#${data.bgColor}` }}>
+          QR Generator
+        </h1>
         <input
           style={{
             border: `0.1rem solid #${data.bgColor}`,
+            transition: 'all 0.3s',
             transitionDelay: '.16s',
           }}
           type="text"

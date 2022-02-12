@@ -80,6 +80,7 @@ export default function Controls(props) {
             color: `#${props.bgColor}`,
             backgroundColor: 'transparent',
             border: `1px solid #${props.bgColor}`,
+            transition: 'all 0.3s',
             transitionDelay: '.16s',
           }}
         >
@@ -95,6 +96,7 @@ export default function Controls(props) {
         style={{
           color: `#${props.color}`,
           backgroundColor: `#${props.bgColor}`,
+          transition: 'all 0.3s',
           transitionDelay: '.16s',
         }}
         onClick={props.saveQR}

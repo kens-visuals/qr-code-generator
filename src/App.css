@@ -17,6 +17,18 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.App-heading {
+  color: #fff;
+  border-radius: 1rem;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+  transition-delay: 0.16s;
+}
+
 .App-input {
   width: 100%;
   font-size: 1.6rem;
