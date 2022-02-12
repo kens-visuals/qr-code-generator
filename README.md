@@ -1,6 +1,6 @@
-# Frontend Mentor - PROJECT NAME Solution
+# Frontend Mentor - QR Code Component Solution
 
-This is a solution to the [PROJECT NAME Challenge on Frontend Mentor](PROJECT LINK).
+This is a solution to the [QR Code Component Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H).
 
 ## Table of contents
 
