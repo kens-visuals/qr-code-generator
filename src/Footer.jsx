@@ -1,5 +1,3 @@
-// NOTE: change class names to start with Footer
-
 import './Footer.css';
 
 export default function Footer() {
