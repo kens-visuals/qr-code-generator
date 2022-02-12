@@ -4,8 +4,6 @@ import FileSaver from 'file-saver';
 import Footer from './Footer';
 import Controls from './Controls';
 
-import qrImg from './qrcode.png';
-
 import './App.css';
 
 function App() {
